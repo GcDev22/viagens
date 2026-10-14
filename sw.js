@@ -1,6 +1,6 @@
 // Guarda os arquivos do app para ele abrir mesmo sem internet.
 // Estratégia: tenta a rede primeiro (para pegar atualizações) e usa a cópia guardada se falhar.
-const CACHE = 'viagens-v1';
+const CACHE = 'viagens-v2';
 const ARQUIVOS = [
   './', 'index.html', 'styles.css', 'app.js', 'api.js', 'config.js', 'manifest.webmanifest',
   'icons/icon-192.png', 'icons/icon-512.png', 'icons/apple-touch-icon.png'
