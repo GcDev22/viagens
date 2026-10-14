@@ -141,6 +141,8 @@
   }
 
   async function carregar() {
+    // Sem PIN guardado, pede antes de chamar o Google, para não contar como tentativa errada.
+    if (Api.modo === 'conectado' && !Api.temPin()) { mostrarPin(); return; }
     $('#tela-proximas').innerHTML = '<div class="carregando"><span class="girando"></span><p>Carregando viagens…</p></div>';
     try {
       const dados = await Api.carregar();
