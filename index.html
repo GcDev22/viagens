@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Viagens da Família</title>
+  <meta name="theme-color" content="#1d4ed8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Viagens">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topo">
+    <h1>✈️ Viagens da Família</h1>
+    <button class="icone-btn" id="btn-config" aria-label="Configurações">⚙️</button>
+  </header>
+
+  <div id="faixa-status" class="faixa" hidden></div>
+
+  <main id="conteudo">
+    <section id="avisos" class="avisos" aria-label="Avisos"></section>
+    <section id="tela-proximas" class="tela"></section>
+    <section id="tela-calendario" class="tela" hidden></section>
+  </main>
+
+  <button class="fab" id="btn-nova" aria-label="Nova viagem">＋ Nova viagem</button>
+
+  <nav class="abas" aria-label="Telas">
+    <button class="aba ativa" data-tela="proximas"><span>📋</span>Próximas</button>
+    <button class="aba" data-tela="calendario"><span>📅</span>Calendário</button>
+  </nav>
+
+  <div id="camadas"></div>
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="config.js"></script>
+  <script src="api.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
